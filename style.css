@@ -1,0 +1,40 @@
+.title {
+    text-align: center;
+    font-family: "Funnel Sans", serif;
+}
+
+.term {
+    border: solid 5px red;
+    border-radius: 15px;
+    text-align: center;
+    width: 45%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.definition {
+    border: solid 5px blue;
+    border-radius: 15px;
+    text-align: center;
+    width: 45%;
+    margin: auto;
+    margin-top: 100px;
+    display: none;
+}
+
+.button {
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+button {
+    color: white;
+    background-color: rgb(7, 190, 7);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
