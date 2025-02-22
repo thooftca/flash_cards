@@ -1,40 +1,194 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title */
 .title {
     text-align: center;
     font-family: "Funnel Sans", serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-top: 50px;
+    text-transform: uppercase;
 }
 
+/* Term Styling */
 .term {
-    border: solid 5px red;
-    border-radius: 15px;
+    border: solid 5px #3498db;
+    border-radius: 20px;
     text-align: center;
     width: 45%;
-    margin: auto;
-    margin-top: 100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3498db;
+    transition: all 0.3s ease;
 }
 
+.term:hover {
+    background-color: #3498db;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Definition Styling */
 .definition {
-    border: solid 5px blue;
-    border-radius: 15px;
+    border: solid 5px #2ecc71;
+    border-radius: 20px;
     text-align: center;
     width: 45%;
-    margin: auto;
-    margin-top: 100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 1.3rem;
+    color: #2ecc71;
     display: none;
+    transition: all 0.3s ease;
 }
 
+.definition:hover {
+    background-color: #2ecc71;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Plain Text Styling */
+.plainText {
+    text-align: center;
+    font-family: "Funnel Sans", serif;
+    font-size: 1.2rem;
+    color: #34495e;
+}
+
+/* Button Styling */
 .button {
     text-align: center;
-    margin-top: 100px;
-
+    margin-top: 30px;
 }
 
 button {
     color: white;
-    background-color: rgb(7, 190, 7);
-    padding: 20px;
-    border-radius: 15px;
+    background-color: #3498db;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 20px auto;
 }
 
 button:hover {
     transform: scale(1.1);
+    background-color: #2980b9;
+}
+
+/* Styling for the toggle button */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the toggle button */
+.toggle-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+/* Hide the checkbox, and style the label to look like a toggle switch */
+/*.toggle-checkbox {
+/*    display: none;
+/*}
+
+/* The toggle button appearance */
+.toggle-label {
+    width: 50px;
+    height: 25px;
+    background-color: #3498db;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* The circle inside the toggle */
+.toggle-label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    transition: transform 0.3s ease;
+}
+
+/* When the checkbox is checked, move the circle and change the background */
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #2ecc71;
+}
+
+.toggle-checkbox:checked + .toggle-label::before {
+    transform: translateX(25px);
+}
+
+/* Answer Section Styling */
+.answer-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.answer-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #3498db;
+    margin-right: 10px;
+}
+
+.answer-input:focus {
+    outline: none;
+    border-color: #2980b9;
+}
+
+.check {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.check:hover {
+    background-color: #2980b9;
+}
+
+#feedback {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
 }
