@@ -261,3 +261,24 @@ body {
     font-size: 25px;
     font-weight: bold;
 }
+
+
+#funny-gif {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* New CSS to create a transparent area at the top 
+#funny-gif:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; 
+    background-color: rgba(0, 0, 0, 0.5);  
+}*/
+

@@ -6,13 +6,13 @@ const nextButton = document.querySelector('.next');
 const questionType = document.querySelector('.question-type'); // New element to indicate perfect/imperfect
 const feedback = document.getElementById('feedback');
 
-document.getElementById('heart-number').textContent = 3;
-
 const data = Object.entries(words);
 
 let currentCorrectAnswer = ""; 
 let currentQuestionType = ""; // "perfect" or "imperfect"
 let score = 0; // Initialize score
+let numLives = 3;
+document.getElementById('heart-number').textContent = numLives;
 
 function getRandomWord() {
     const randomTerm = data[Math.floor(Math.random() * data.length)];
@@ -33,6 +33,7 @@ function getRandomWord() {
 
 function updateScore() {
     document.getElementById('scoreBoard').innerText = `Score: ${score}`;
+    document.getElementById('heart-number').textContent = numLives;
 }
 
 // Function to check the user's answer
@@ -54,6 +55,10 @@ function checkAnswer() {
         feedback.innerText = `Incorrect. The correct answer is: ${currentCorrectAnswer}`;
         feedback.classList.remove('correct');
         feedback.classList.add('incorrect');
+        numLives--;
+        if (numLives === 0) {
+            displayFunnyGif(); // Show the funny GIF
+          }
     }
 
     updateScore(); 
@@ -61,6 +66,11 @@ function checkAnswer() {
     definition.innerHTML = `<h3>${currentCorrectAnswer}</h3>`; // Show the correct answer
     definition.style.display = "block"; 
 }
+
+// Function to display the funny GIF
+function displayFunnyGif() {
+    document.getElementById('funny-gif').style.display = 'block'; // Show the GIF
+  }
 
 checkButton.addEventListener('click', checkAnswer);
 nextButton.addEventListener('click', getRandomWord);
