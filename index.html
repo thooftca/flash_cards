@@ -11,15 +11,17 @@
     </head>
 
     <body onload="getRandomWord()">
-        <h1 class="title"> Welcome to TaalTastic</h1>
+        <h1 class="title"> Welcome to TaalTastic, Jordo!</h1>
+
+        <div id="scoreBoard">Score: 0</div>
+
+   
 
         <div class="term">
             <h3>Header 2</h3>
         </div>
         
-        <div class="plainText">
-            <h3>Wat is de perfecte tijd vervoeging?</h3>
-        </div>
+        <div class="question-type"></div>
 
         <div class="answer-section">
             <input type="text" id="user-answer" placeholder="Type your answer" class="answer-input">
@@ -39,6 +41,11 @@
         <div class="toggle-container">
             <input type="checkbox" id="toggle" class="toggle-checkbox">
             <label for="toggle" class="toggle-label"></label>
+        </div>
+
+        <div id="heart-container">
+            <div id="heart"></div>
+            <span id="heart-number">3</span> <!-- This is the number, separate from the heart -->
         </div>
 
         <script src="js/words.js"></script>

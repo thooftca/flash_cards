@@ -27,6 +27,7 @@ body {
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
     color: #3498db;
@@ -49,6 +50,7 @@ body {
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
     font-size: 1.3rem;
     color: #2ecc71;
     display: none;
@@ -62,7 +64,7 @@ body {
 }
 
 /* Plain Text Styling */
-.plainText {
+.question-type {
     text-align: center;
     font-family: "Funnel Sans", serif;
     font-size: 1.2rem;
@@ -80,6 +82,7 @@ button {
     background-color: #3498db;
     padding: 15px 20px;
     border-radius: 10px;
+    font-family: 'Arial', sans-serif;
     font-size: 1.2rem;
     border: none;
     cursor: pointer;
@@ -191,4 +194,70 @@ body {
 
 .incorrect {
     color: red;
+}
+
+
+#scoreBoard {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+}
+
+
+
+#heart-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#heart {
+    width: 66px;
+    height: 60px;
+    position: relative;
+    /* Heart shape styles */
+}
+
+#heart::before, #heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 25px;
+    height: 45px;
+    border-radius: 50px 50px 0 0;
+    background: red;
+}
+
+#heart::before {
+    right: 126px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+#heart::after {
+    right: 150px;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+/* Number Styles */
+#heart-number {
+    position: absolute;
+    top: 42%; /* Centers the number vertically */
+    right: 137px; /* Centers the number horizontally */
+    transform: translate(-50%, -50%); /* Centers the number within the heart container */
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
 }
