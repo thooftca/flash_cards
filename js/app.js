@@ -7,9 +7,13 @@ const questionType = document.querySelector('.question-type'); // New element to
 const feedback = document.getElementById('feedback');
 
 const data = Object.entries(words);
+const pronouns = Object.entries(pronouns);
+const hebbenzijn = Object.entries(hebbenzijn);
 
 let currentCorrectAnswer = ""; 
 let currentQuestionType = ""; // "perfect" or "imperfect"
+let currentPronoun = "";      // 'ik', 'jij, ...
+let hebbnzijn = "";
 let score = 0; // Initialize score
 let numLives = 3;
 document.getElementById('heart-number').textContent = numLives;
@@ -56,9 +60,9 @@ function checkAnswer() {
         feedback.classList.remove('correct');
         feedback.classList.add('incorrect');
         numLives--;
-        if (numLives === 0) {
-            displayFunnyGif(); // Show the funny GIF
-          }
+        // if (numLives === 0) {
+        //     displayFunnyGif(); // Show the funny GIF
+        //  }
     }
 
     updateScore(); 
@@ -67,10 +71,10 @@ function checkAnswer() {
     definition.style.display = "block"; 
 }
 
-// Function to display the funny GIF
-function displayFunnyGif() {
-    document.getElementById('funny-gif').style.display = 'block'; // Show the GIF
-  }
+// Function to display the funny GIF - gif should be added to local directory
+// function displayFunnyGif() {
+//    document.getElementById('funny-gif').style.display = 'block'; // Show the GIF
+//  }
 
 checkButton.addEventListener('click', checkAnswer);
 nextButton.addEventListener('click', getRandomWord);
